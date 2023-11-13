@@ -10,6 +10,7 @@ font-family: 'Public Sans', sans-serif; */
 
 :root{
     --heading-family-1:  'Philosopher', sans-serif;
+    --color-light-bg: #f6fff8;
 }
 
 h1,h2{
@@ -31,7 +32,7 @@ h3{
 
 }
 body{
-    
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -45,21 +46,33 @@ body{
 .btn {
     padding: 10px 15px;
     font-size: 1.1rem;
-    border-radius: 25px;
+    border-radius: 5px;
     outline: none;
     border: none;
     margin-top: 1rem;
-    background-color: blue;
+    color: white;
+    background-color: #283044;
     cursor: pointer;
 }
 .hero-main-container{
     height: 28%;
+    box-shadow: 2px 4px 4px rgba(0,0,0,0.1);
     /* background-color: red; */
 }
-
+input{
+    outline: none;
+    border: none;
+}
+/* input[type="text"],
+input[type="email"],
+input[type="password"]{
+    outline: none;
+    border: none;
+} */
 
 .hero-inner-container {
-    padding: 1rem;
+    padding-top: 1rem;
+    padding-bottom: .5rem;
     width: 100%;
     height: 100%;
     display: flex;
@@ -93,22 +106,24 @@ a {
     width: max-content;
     text-transform:uppercase;
     letter-spacing: 2px;
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-size: 1rem;
+    /* font-weight: 600; */
     text-align: center;
     box-shadow: 0px 2px 2px rgba(255, 255, 255, 0.3);
     background-color: #ecd0b90b;
-    border-radius: 10px;
+    /* border-radius: 10px; */
 }
 
 .nav-bar-inner-container li a{
     display: block;
-    padding: 10px 15px;
-    border-radius: 10px;
+    padding: 7px 10px;
+    /* border-radius: 10px; */
 }
 
 .nav-bar-inner-container li a:hover{
     outline: 2px solid #000;
+    background-color: #000;
+    color: white;
 }
 
 
@@ -117,7 +132,7 @@ a {
     justify-content: center;
     align-items: center;
     /* background-color: red; */
-    height: 74vh;
+    height: 78vh;
 }
 
 .index-search-bar-container input{
@@ -159,8 +174,10 @@ a {
 
 /* ###########  TOP RECIPES ################## */
 .top-recipies-container{
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
     margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    background-color: white;;
 }
 
 .top-recipies-container h2{
@@ -184,6 +201,7 @@ a {
     width: 16rem;
     border-radius: 16px;
     display: flex;
+    background-color: #eff1f3;
     justify-content: space-between;
     flex-direction: column;
     overflow: hidden;
@@ -202,9 +220,11 @@ a {
 }
 
 .btn-recipe{
-    background-color: black;
+    /* background-color: black; */
     color: white;
-    width: max-content;
+    width: 8rem;
+    font-size: 1.2rem;
+    border-radius: none;
     display: inline-block;
     margin-left: auto;
     margin-right: auto;

@@ -1,0 +1,11 @@
+filter
+
+filter by breakfast, lunch ,dinner - tags
+
+filter by ingredidents 
+  -- should display the ingredients using check boxes
+
+filter by cooking time
+  -- should display time checkboxes or radio 
+
+a button to filter search
