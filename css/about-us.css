@@ -35,3 +35,33 @@
     font-size: 1.2rem;
     margin-bottom: 4rem;
 }
+
+.contact-form-container{
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fafaff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    border-radius: 25px;
+    padding: 3rem;
+    margin-bottom: 3rem;
+}
+
+.contact-details{
+    display: flex;
+    margin-top: 2rem;
+    flex-direction: column;
+    /* font-size: 1.2rem; */
+}
+
+.contact-details input, textarea{
+    /* background-color: transparent; */
+    font-size: 1.2rem;
+    margin: 1rem 0rem;
+    padding: 5px 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}

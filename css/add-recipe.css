@@ -1,0 +1,51 @@
+.add-recipe-main-container form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.add-recipe-main-container label {
+    display: block;
+    margin-top: 10px;
+}
+
+.add-recipe-main-container textarea, input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(0,0,0,.1)
+}
+
+.ingredient-container, .instructions-main-container {
+    margin-bottom: 10px;
+}
+
+.ingredient-container, button{
+    padding: 10px 15px;
+}
+/* .add-recipe-main-container button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-recipe-main-container button:hover {
+    background-color: #45a049;
+}
+
+#recipeForm .delete-button {
+    background-color: #ff3333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 8px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+#recipeForm .delete-button:hover {
+    background-color: #e60000;
+} */

@@ -6,7 +6,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="../css/index.css">
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/about-us.css">
+    <!-- <link rel="stylesheet" href="../css/login.css"> -->
 </head>
 <body>
     <div class="hero-main-container">
@@ -22,8 +23,8 @@
                         <li class="nav-item"><a href="index.html">Home</a></li>
                         <li class="nav-item"><a href="recipies.html">Recipes</a></li>
                         <li class="nav-item"><a href="about-us.html">About US</a></li>
+                        
                         <li class="nav-item"><a href="contact.html">Contact</a></li>
-                        <li class="nav-item"><a href="add-recipe.html">Add Recipe</a></li>
                         
                     </ul>
                 </nav>
@@ -37,24 +38,32 @@
             </div>
         </header>
     </div>
-
+    
+    
     <div class="content-container">
-        <div class="login-form-outer-container">
+        <div class="about-main-container contact-main-container">
 
-            <form action="" class="user-form forgot-password-form-container">
-                <h2 class="content-title">FORGOT PASSWORD</h2>
-            <div class="user-login-details">
-                <p>Enter email address to get a link</p>
-                <input type="email" id="email" placeholder="Email">
-                <a href=""><button class="btn" id="login-button" type="submit">Send Link</button></a>
+            
+            
+            <h1>Any Query? <br/> Contact Flavor Fusion</h1>
+            <div class="about-image">
+                <img src="../images/background-image-main.jpg" alt="">
+            </div>
+            <div class="about-us-content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo iusto iste officia voluptatibus dicta placeat cum ipsam molestiae culpa repellendus quisquam quidem quos laudantium molestias, perspiciatis rerum ad at repudiandae, debitis officiis numquam a consequuntur eaque? Perspiciatis earum neque ex?</p>
             </div>
             
-            <div>
-                <p>Don't have account ?</p>
-                <a class="user-auth-link" href="register.html">Sign Up</a>
+            
+        </div>
+        <form action="" class="contact-form-container">
+            <h2 class="content-title">Submit A Query, We'll get back to you.</h2>
+            <div class="contact-details">
+                <input type="text" name="name" id="name" placeholder="full name" required>
+                <input type="email" name="email" id="email" placeholder="email" required>
+                <textarea style="resize:none" name="query" id="query" cols="30" rows="10" placeholder="message"></textarea>
+                <a href=""><button class="btn" id="contact-button" type="submit">submit</button></a>
             </div>
         </form>
-    </div>
     </div>
     
     <footer class="footer-main-container">

@@ -11,6 +11,13 @@ font-family: 'Public Sans', sans-serif; */
 :root{
     --heading-family-1:  'Philosopher', sans-serif;
     --color-light-bg: #f6fff8;
+    --btn-bg-color-one: #000;
+    --btn-bg-color-two: #283044;
+    /* --btn-bg-color-three: #000; */
+    --box-shadow-extra-light: 2px 2px 2px rgba(0, 0, 0, .1);
+    --box-shadow-light: 2px 4px 4px rgba(0,0,0,0.1);
+    --border-radius-primary: 10px;
+
 }
 
 h1,h2{
@@ -36,13 +43,24 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    scroll-behavior: smooth;
 }
-/* .hero-main-container{
-    background: url('../images/background-image-main.jpg') no-repeat center/cover;
-} */
+
 .index-search-bar-container{
     background: url('../images/background-image-main.jpg') no-repeat center/cover;
 }
+
+a {
+    /* color: white; */
+    color: black;
+    text-decoration: none;
+}
+
+input,textarea{
+    outline: none;
+    border: none;
+}
+
 .btn {
     padding: 10px 15px;
     font-size: 1.1rem;
@@ -51,24 +69,10 @@ body{
     border: none;
     margin-top: 1rem;
     color: white;
-    background-color: #283044;
+    background-color:  var(--btn-bg-color-two);
     cursor: pointer;
 }
-.hero-main-container{
-    height: 28%;
-    box-shadow: 2px 4px 4px rgba(0,0,0,0.1);
-    /* background-color: red; */
-}
-input{
-    outline: none;
-    border: none;
-}
-/* input[type="text"],
-input[type="email"],
-input[type="password"]{
-    outline: none;
-    border: none;
-} */
+
 
 .hero-inner-container {
     padding-top: 1rem;
@@ -77,14 +81,25 @@ input[type="password"]{
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    box-shadow: var(--box-shadow-light);
+
 }
 
-.logo-container img{
-    width: 200px;
-    height: 70px;
+.logo-container{
+    font-size:3rem;
+    transition: all .6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
+
+.navbar-outer-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+    
+}
+
 
 .nav-bar-inner-container {
     list-style: none;
@@ -92,13 +107,9 @@ input[type="password"]{
     display: flex;
     justify-content: space-around;
     align-items: center;
+
 }
 
-a {
-    /* color: white; */
-    color: black;
-    text-decoration: none;
-}
 
 .nav-bar-inner-container li {
     margin-left: 1rem;
@@ -109,8 +120,6 @@ a {
     font-size: 1rem;
     /* font-weight: 600; */
     text-align: center;
-    box-shadow: 0px 2px 2px rgba(255, 255, 255, 0.3);
-    background-color: #ecd0b90b;
     /* border-radius: 10px; */
 }
 
@@ -126,13 +135,41 @@ a {
     color: white;
 }
 
+.user-check-container{
+    display: flex;
+    position: absolute;
+    right: 0;
+    align-self: flex-end;
+    /* background-color: red; */
+}
+
+.sticky-hero {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5rem;
+    background-color: white;
+    z-index: 1000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.logo-container.scrolled {
+    font-size: 2rem;
+    padding: 1rem 0rem;
+    padding-left: 2rem;
+    transition: all 0.5s ;
+    transition: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
 
 .index-search-bar-container{
     display: flex;
     justify-content: center;
     align-items: center;
     /* background-color: red; */
-    height: 78vh;
+    height: 80vh;
 }
 
 .index-search-bar-container input{
@@ -164,14 +201,47 @@ a {
 }
 
 .footer-main-container{
-    height: 3rem;
+    
+    min-height: 3rem;
     color: white;
     text-align: center;
     padding: 1rem;
     background-color: rgb(24, 24, 24);
 }
 
+.footer-main-container div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+.footer-social-icons-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.footer-social-icons-container div a{
+    margin: .5px 10px;
+    font-size: 1.2rem;
+}
 
+.footer-social-icons-container a {
+    color: white;
+}
+
+.footer-other-details{
+    display: flex;
+    /* background-color: red; */
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.footer-other-details p{
+    width: 60%;
+}
 /* ###########  TOP RECIPES ################## */
 .top-recipies-container{
     /* margin-top: 2rem; */
@@ -248,6 +318,9 @@ a {
     align-items: center;
     padding-top: 4rem;
     padding-bottom: 4rem;
+}
+.index-about-us-details{
+    width: 60%;
 }
 
 .index-about-us-image {
