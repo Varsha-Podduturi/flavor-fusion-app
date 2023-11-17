@@ -11,6 +11,7 @@ font-family: 'Public Sans', sans-serif; */
 :root{
     --heading-family-1:  'Philosopher', sans-serif;
     --color-light-bg: #f6fff8;
+    --bg-form-light: #fafaff;
     --btn-bg-color-one: #000;
     --btn-bg-color-two: #283044;
     /* --btn-bg-color-three: #000; */
@@ -281,9 +282,25 @@ input,textarea{
 .recipe-container .recipe-title{
     font-size: 1.2rem;
     margin-top: 1rem;
+    /* background-color: red; */
+}
+
+.recipe-image-container {
+    position: relative;
+    height: 100%;
+}
+
+.recipe-image-container i {
+    position: absolute;
+    z-index: 10;
+    top: 10px;
+    right: 10px;
+    color: white;
+    cursor: pointer;
+    overflow: hidden;
 }
 .recipe-container img{
-    height: 80%;
+    height: 100%;
     width: 100%;
     object-fit: cover;
     

@@ -73,10 +73,10 @@
                     <label>Ingredients:</label>
                     <div id="ingredientsContainer" class="ingredients-main-container">
             
-                        <button type="button" onclick="addIngredient()">Add Ingredient</button>
                         <div class="ingredients-inner-container">
                             
                         </div>
+                        <button type="button" onclick="addIngredient()">Add Ingredient</button>
                     </div>
                 </div>
 
@@ -85,15 +85,15 @@
                     <label>Instructions:</label>
                     <div id="instructionsContainer" class="instructions-main-container">
                         
-                        <button type="button" onclick="addInstruction()">Add Step</button>
                         <div class="instructions-inner-container">
-
+                            
                         </div>
+                        <button type="button" onclick="addInstruction()">Add Step</button>
                         
                     </div>
                 </div>
 
-                <button type="button" onclick="submitRecipe()">Submit Recipe</button>
+                <button id="recipeSubmit" type="submit">Submit Recipe</button>
             </form>
         </div>
     </div>
@@ -188,10 +188,16 @@
         }
         function updateStepNumbers(container) {
             var children = container.children;
+            // console.log(children)
             for (var i = 0; i < children.length; i++) {
                 var stepHeader = children[i].querySelector("h4");
+                var parent = stepHeader.parentElement
+                var inputInstruction = parent.querySelector('input')
+                // console.log(stepHeader)
+                // console.log(parent)
                 if (stepHeader) {
                     stepHeader.textContent = "Step " + (i + 1);
+                    inputInstruction.placeholder = "Instruction for Step " + (i + 1);
                 }
             }
         }

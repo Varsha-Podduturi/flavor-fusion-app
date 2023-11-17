@@ -36,7 +36,7 @@
 font-size: 1.5rem;
     color: var(--primary-500);
 }
-#likeRecipe{
+#saveRecipe, #shareRecipe{
     cursor: pointer;
     background-color: transparent;
     border:none;

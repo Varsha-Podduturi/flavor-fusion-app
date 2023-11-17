@@ -1,6 +1,18 @@
+
+.add-recipe-main-container {
+    margin-top: 2rem;
+}
+.add-recipe-main-container h1{
+    text-align: center;
+}
+
 .add-recipe-main-container form {
-    max-width: 600px;
-    margin: 0 auto;
+    max-width: 60%;
+    margin: 3rem auto;
+    padding: 1rem;
+    background-color: var(--bg-form-light);
+    border: 2px solid rgba(0,0,0,.3);
+    border-radius: 10px;
 }
 
 .add-recipe-main-container label {
@@ -11,19 +23,22 @@
 .add-recipe-main-container textarea, input {
     width: 100%;
     padding: 8px;
-    margin-top: 5px;
-    margin-bottom: 10px;
+    /* margin-top: 5px; */
+    /* margin-bottom: 10px; */
     border: 1px solid rgba(0,0,0,.1)
 }
 
-.ingredient-container, .instructions-main-container {
+.ingredient-main-container, .instructions-main-container {
     margin-bottom: 10px;
 }
-
+.ingredient-container input{
+    min-width: 4rem;
+    max-width: max-content;
+}
 .ingredient-container, button{
     padding: 10px 15px;
 }
-/* .add-recipe-main-container button {
+.add-recipe-main-container button {
     background-color: #4CAF50;
     color: white;
     padding: 10px 15px;
@@ -45,7 +60,30 @@
     margin-left: 5px;
     cursor: pointer;
 }
-
+#recipeForm>div{
+    margin: 2rem 0rem;
+}
+#recipeSubmit{
+    background-color: var(--btn-bg-color-two);
+    margin-left: auto;
+    width: max-content;
+    margin-right: auto;
+    display: block;
+}
 #recipeForm .delete-button:hover {
     background-color: #e60000;
-} */
+} 
+#recipeForm input:focus, textarea:focus{
+    border: 1px solid var(--btn-bg-color-two)
+}
+.ingredients-inner-container, .instructions-inner-container{
+    margin: .5rem 0rem;
+    padding: 5px
+}
+
+.instruction-container {
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
+.instruction-container>*{
+    margin: 10px 0;
+}
