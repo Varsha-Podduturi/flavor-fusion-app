@@ -47,6 +47,15 @@ font-size: 1.5rem;
     font-size: 0.85em;
 }
 
+#copyStatus {
+    color: #000; /* Initial color */
+    transition: color 0.3s;
+}
+
+#copyStatus.copied {
+    color: #00ff00; /* Color when link is copied */
+}
+
 .recipe-icons p {
     color: var(--grey-600);
 }

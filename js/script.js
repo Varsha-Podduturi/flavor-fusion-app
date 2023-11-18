@@ -20,6 +20,58 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// ----save recipe to users list--------
+function saveRecipe(icon) {
+    
+
+    if(icon.classList.contains('fa-regular')){
+        icon.classList.remove('fa-regular')
+        icon.classList.add('fa-solid')
+        // console.log("in fa-regular")
+        // console.log(icon)
+    }else{
+        // console.log("fa-solid")
+        icon.classList.remove('fa-solid')
+        icon.classList.add('fa-regular')
+        // console.log(icon)
+    }
+
+    icon.classList.toggle('saved');
+
+    // console.log(icon)
+    
+    // You can add additional logic here to handle saving the recipe to the user's list
+    // For example, you can send an API request to your server to save the recipe.
+}
+
+function copyToClipboard() {
+    // Get the current URL
+    const currentUrl = window.location.href;
+
+    const input = document.createElement('input');
+    input.value = currentUrl;
+    document.body.appendChild(input);
+
+    // Select the URL in the textarea and copy it to the clipboard
+    input.select();
+    document.execCommand('copy');
+
+    // Remove the temporary textarea
+    document.body.removeChild(input);
+
+    // display the "link copied" message with green color
+    const copyStatus = document.getElementById('copyStatus');
+    copyStatus.textContent = 'Link copied';
+    copyStatus.classList.add('copied');
+
+    // reset the color after a short delay
+    setTimeout(() => {
+        copyStatus.textContent = '';
+        copyStatus.classList.remove('copied');
+    }, 2000); 
+}
+
+
 document.addEventListener("DOMContentLoaded", function () {
     
     
@@ -36,4 +88,5 @@ document.addEventListener("DOMContentLoaded", function () {
             dropdownOptions.classList.toggle("active")
         })
     })
+
 });
