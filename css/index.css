@@ -89,9 +89,15 @@ input,textarea{
 }
 
 .logo-container{
-    font-size:3rem;
+    /* font-size:3rem; */
+    width: 200px;
+    height: 80px;
     transition: all .6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
+.logo-container img{
+    width: 100%;
+}
+
 
 .navbar-outer-container{
     display: flex;
@@ -158,10 +164,11 @@ input,textarea{
 }
 
 .logo-container.scrolled {
-    font-size: 2rem;
+    /* font-size: 2rem; */
     padding: 1rem 0rem;
     padding-left: 2rem;
-    transition: all 0.5s ;
+    width: 140px;
+    height: 80px;
     transition: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
