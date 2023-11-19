@@ -89,7 +89,7 @@
 }
 
 .input-search{
-    border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, .3);
     /* border-radius: 10px; */
     font-size: 1.2rem;
     width: 80%;
@@ -108,7 +108,9 @@
 #recipeSearchBtn{
     padding:  10px 15px;
     font-size: 1.2rem;
-    
+    background-color: black;
+    color: white;
+    border: none;
 }
 
 .total-recipies-container{
@@ -128,4 +130,61 @@
     width: max-content;
     margin-left: auto;
     margin-right: auto;
+}
+
+.recipe-filter-toogle-container{
+    display: none;
+}
+
+@media screen and (max-width: 1000px) {
+    .recipies-main-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 97%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        position: relative;
+    }
+    .total-recipies-container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .recipe-search-container{
+        position: absolute;
+        z-index: 1;
+        top:20px;
+        right: 30px;
+    }
+    .recipe-filter-toogle-container{
+        display: block;
+        margin-bottom: 2rem;
+        margin-top: 1.4rem;
+        text-align: center;
+    }
+    .filter-list-container {
+        margin-top: 4rem;
+        align-self: center;
+        width: 20rem;
+        display: none;
+    }
+    .filter-list-container.show{
+        display: block;
+    }
+    
+}
+@media screen and (max-width: 760px) {
+    .input-search{
+        width: 70%;
+    }
+    .recipe-search-container{
+        width: 90%;
+        left: 15px;
+    }
+    .total-recipies-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
 }

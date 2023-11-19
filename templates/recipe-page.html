@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Recipe</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="../css/recipe.css">
+    <link rel="stylesheet" href="../css/recipies.css">
+    <link rel="stylesheet" href="../css/add-recipe.css">
+    <link rel="stylesheet" href="../css/user.css">
+    <link rel="stylesheet" href="../css/about-us.css">
 </head>
 <body>
     <div class="hero-main-container">
@@ -26,6 +30,7 @@
                         <li class="nav-item"><a href="contact.html">Contact</a></li>
                         <li class="nav-item"><a href="add-recipe.html">Add Recipe</a></li>
                         
+                        
                     </ul>
                 </nav>
                 <div class="user-check-container">
@@ -38,6 +43,23 @@
             </div>
         </header>
     </div>
+    <div class="burger-menu" onclick="toggleNavbar()">
+        <i class="fas fa-bars"></i>
+    </div>
+    <!-- responsive navigation bar -->
+    <div class="navbar-responsive" id="navbarResponsive">
+        <ul class="nav-bar-inner-container">
+            <li class="nav-item"><a href="index.html">Home</a></li>
+            <li class="nav-item"><a href="recipies.html">Recipes</a></li>
+            <li class="nav-item"><a href="about-us.html">About US</a></li>
+            <li class="nav-item"><a href="contact.html">Contact</a></li>
+            <li class="nav-item"><a href="add-recipe.html">Add Recipe</a></li>
+            <li class="nav-item"><a href="login.html">Login</a></li>
+            <li class="nav-item"><a href="register.html">Sign Up</a></li>
+        </ul>
+        <div class="close-btn" onclick="toggleNavbar()">×</div>
+    </div>
+
 
     <div class="content-container">
             <div class="recipe-page">

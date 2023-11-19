@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipies</title>
+    <title>User</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/login.css">
@@ -62,120 +62,16 @@
 
 
     <div class="content-container">
-        <div class="recipies-main-container">
+        <div class="profile-main-container">
             
-            <div id="filterContainer" class="filter-list-container">
-                <h4>Filter By</h4>
-                <form action="" class="filter-list-form" id="filterForm">
-                    <div class="filter-option">
-                        <div class="option-main">
-                            <label for="mealType">Meal Type: </label>
-
-                            <button class="dropdown-btn" type="button"><i class="fa-solid fa-caret-down"></i></button>
-                        </div>
-                        <div class="dropdown" id="mealTypeDropdown">
-                            
-                            
-                            <div class="dropdown-content">
-                                <!-- <div>
-
-                                    <input type="text" id="mealType" class="filter-input" placeholder="Search...">
-                                </div> -->
-                                <div>
-
-                                    <input type="checkbox" id="breakfast" name="breakfast">
-                                    <label for="breakfast">Breakfast</label>
-                                </div>
-                                <div>
-
-                                    <input type="checkbox" id="lunch" name="lunch">
-                                    <label for="lunch">Lunch</label>
-                                </div>
-                                <div>
-
-                                    <input type="checkbox" id="dinner" name="dinner">
-                                    <label for="dinner">Dinner</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <div class="filter-option">
-                        <div class="option-main">
-
-                            <label for="ingredients">Ingredients: </label>
-                            <button class="dropdown-btn" type="button"><i class="fa-solid fa-caret-down"></i></button>
-                        </div>
-                        <div class="dropdown" id="ingredientsDropdown">
-                            
-                            <div class="dropdown-content">
-                                <!-- <div>
-
-                                    <input type="text" id="ingredients" class="filter-input" placeholder="Search...">
-                                </div> -->
-                                <div>
-
-                                    <input type="checkbox" id="ingredient1" name="ingredient1">
-                                    <label for="ingredient1">Ingredient 1</label>
-                                </div>
-                                <div>
-
-                                    <input type="checkbox" id="ingredient2" name="ingredient2">
-                                    <label for="ingredient2">Ingredient 2</label>
-                                </div>
-                                <div>
-
-                                    <input type="checkbox" id="ingredient3" name="ingredient3">
-                                    <label for="ingredient3">Ingredient 3</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <div class="filter-option">
-                        <div class="option-main">
-
-                            <label for="cookingTime">Cooking Time: </label>
-                            <button class="dropdown-btn" type="button"><i class="fa-solid fa-caret-down"></i></button>
-                        </div>
-                        <div class="dropdown" id="cookingTimeDropdown">
-                            
-                            
-                            <div class="dropdown-content">
-                                <!-- <div>
-
-                                    <input type="text" id="ingredients" class="filter-input" placeholder="Search...">
-                                </div> -->
-                                <div>
-
-                                    <input type="checkbox" id="time30" name="time30">
-                                    <label for="time30">30 Minutes</label>
-                                </div>
-                                <div>
-
-                                    <input type="checkbox" id="time60" name="time60">
-                                    <label for="time60">1 Hour</label>
-                                </div>
-                                <div>
-
-                                    <input type="checkbox" id="time90" name="time90">
-                                    <label for="time90">1.5 Hours</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <button type="button" class="btn filter-btn" id="filterButton">Filter</button>
-                </form>
+            <div class="profile-nav-container">
+                <ul>
+                    <li><a href="">Your Recipies</a></li>
+                    <li><a href="">Favorites</a></li>
+                </ul>
             </div>
             <div class="recipies-inner-container">
-                <div class="recipe-search-container">
-                    <input type="text" class="input-search">
-                    <button type="submit" class="recipeSearch" id="recipeSearchBtn">search</button>
-                </div>
-                <div class="recipe-filter-toogle-container" >
-                    <button type="button" id="toggleFilter" class="btn filter-btn" onclick="toggleFilter()">Filter</button>
-                </div>
+                
                 <div class="total-recipies-container" >
 
                     <div class="recipe-container">

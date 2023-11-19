@@ -87,3 +87,9 @@
 .instruction-container>*{
     margin: 10px 0;
 }
+
+@media screen and (max-width: 1000px) {
+    .add-recipe-main-container form {
+        max-width: 90%;
+    }
+}

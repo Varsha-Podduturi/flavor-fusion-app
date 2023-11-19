@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const heroContainer = document.querySelector(".hero-inner-container");
     const logoContainer = document.querySelector(".logo-container");
     const navbarOuter = document.querySelector('.navbar-outer-container')
-
+    const burgerMenu = document.querySelector('.burger-menu')
     window.addEventListener("scroll", function () {
         const scrollPosition = window.scrollY;
 
@@ -10,15 +10,29 @@ document.addEventListener("DOMContentLoaded", function () {
         if (scrollPosition > 100) {
             heroContainer.classList.add("sticky-hero");
             logoContainer.classList.add("scrolled");
+            burgerMenu.classList.add('sticky')
         } else {
             heroContainer.classList.remove("sticky-hero");
             logoContainer.classList.remove("scrolled");
+            burgerMenu.classList.remove('sticky')
+
         }
 
 
     });
 });
 
+// ---for navigation menu
+function toggleNavbar() {
+    var navbarResponsive = document.getElementById("navbarResponsive");
+    navbarResponsive.classList.toggle("show");
+}
+
+// ---for filter toggle in recipies
+function toggleFilter() {
+    var filterContainer = document.getElementById("filterContainer");
+    filterContainer.classList.toggle("show");
+}
 
 // ----save recipe to users list--------
 function saveRecipe(icon) {
