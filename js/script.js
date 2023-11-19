@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", function () {
         const scrollPosition = window.scrollY;
 
-        // Adjust the hero container
+        // adjust the containers when scrolled
         if (scrollPosition > 100) {
             heroContainer.classList.add("sticky-hero");
             logoContainer.classList.add("scrolled");
@@ -37,7 +37,7 @@ function toggleFilter() {
 // ----save recipe to users list--------
 function saveRecipe(icon) {
     
-
+    // check for the recipe icon type
     if(icon.classList.contains('fa-regular')){
         icon.classList.remove('fa-regular')
         icon.classList.add('fa-solid')
@@ -50,27 +50,24 @@ function saveRecipe(icon) {
         // console.log(icon)
     }
 
+    // add the class to the icon
     icon.classList.toggle('saved');
 
-    // console.log(icon)
-    
-    // You can add additional logic here to handle saving the recipe to the user's list
-    // For example, you can send an API request to your server to save the recipe.
 }
 
 function copyToClipboard() {
-    // Get the current URL
+    // get the url of the page
     const currentUrl = window.location.href;
 
     const input = document.createElement('input');
     input.value = currentUrl;
     document.body.appendChild(input);
 
-    // Select the URL in the textarea and copy it to the clipboard
+    // select the URL in the textarea and copy it to the clipboard
     input.select();
     document.execCommand('copy');
 
-    // Remove the temporary textarea
+    // remove the temporary textarea
     document.body.removeChild(input);
 
     // display the "link copied" message with green color
@@ -88,15 +85,19 @@ function copyToClipboard() {
 
 document.addEventListener("DOMContentLoaded", function () {
     
-    
+    // get all the drop down btns
     const allDropDowns = document.querySelectorAll(".dropdown-btn")
 
     allDropDowns.forEach(dropdown => {
 
         dropdown.addEventListener('click', (e)=>{
             e.preventDefault()
+
+            // get the parent element of the button
             parentElement = dropdown.parentElement
             console.log(parentElement)
+
+            // since the options are in the next element we select that element
             dropdownOptions = parentElement.nextElementSibling
             dropdownOptions.style.display = "block"
             dropdownOptions.classList.toggle("active")
